@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
     const images = [
         {
             url:
@@ -16,12 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
             alt: 'Group of Horses Running',
         },
     ];
-    function createList() {
-        for (let image of images) {
-            const listRef = document.querySelector('#gallery');
-            listRef.insertAdjacentHTML('beforeend', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
-        }
-    }
-
-    createList(images);
-});
+    
+for (let image of images) {
+    const listRef = document.querySelector('#gallery');
+    listRef.insertAdjacentHTML('afterbegin', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
+}
