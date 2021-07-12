@@ -2,8 +2,8 @@ const input = document.querySelector('#validation-input');
 let inputLength = input.getAttribute('data-length');
 let numbInputLength = parseInt(inputLength);
 
-input.addEventListener('input', onInutChange);
-function onInutChange(e) {
+input.addEventListener('input', onInputChange);
+function onInputChange(e) {
 
     if (e.currentTarget.value.length === numbInputLength) {
         input.classList.remove("invalid");
