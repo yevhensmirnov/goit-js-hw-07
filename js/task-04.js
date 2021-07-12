@@ -1,22 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-
-    const sub = document.querySelector("[data-action='decrement']");
+const rem = document.querySelector("[data-action='decrement']");
     const add = document.querySelector("[data-action='increment']");
     const value = document.querySelector('#value');
-
-
-
+    
     let counterValue = 0;
-    function onClickTargetButtonDecrement() {
+
+    function Decrement() {
         counterValue -= 1;
         value.textContent = counterValue;
     }
 
-    function onClickTargetButtonIncrement() {
+    function Increment() {
         counterValue += 1;
         value.textContent = counterValue;
     }
 
-    sub.addEventListener('click', onClickTargetButtonDecrement);
-    add.addEventListener('click', onClickTargetButtonIncrement);
-});
+    rem.addEventListener('click', Decrement);
+    add.addEventListener('click', Increment);
