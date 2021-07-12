@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
     const ingredients = [
         'Картошка',
         'Грибы',
@@ -8,16 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
         'Приправы',
     ];
 
-    const ingredientList = document.querySelector('#ingredients');
-
-    function createList1(ingredients) {
-        const itemName = ingredients.map(ingredient => {
-            let item = document.createElement('li');
-            item.textContent = ingredient;
-            return item;
-        });
-        ingredientList.append(...itemName);
-    }
-
-    createList1(ingredients);
-});
+    const ingredientsEl = document.querySelector('#ingredients');
+for (let i = 0; i < ingredients.length; i++) {
+    let liEl = document.createElement('li');
+    liEl.textContent = ingredients[i]
+    ingredientsEl.append(liEl)
+}
+console.log(ingredientsEl)
